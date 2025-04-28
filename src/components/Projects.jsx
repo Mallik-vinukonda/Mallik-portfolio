@@ -53,13 +53,15 @@ function Projects() {
 							initial="hidden"
 							whileInView="show"
 						>
-							<img
-								src={project.image}
-								width={400}
-								height={350}
-								alt={project.title}
-								className="rounded-lg object-cover"
-							/>
+							<a href={project.live} target="_blank" rel="noopener noreferrer">
+								<img
+									src={project.image}
+									width={400}
+									height={350}
+									alt={project.title}
+									className="rounded-lg object-cover cursor-pointer"
+								/>
+							</a>
 						</motion.div>
 
 						<div className="w-full max-w-2xl lg:w-2/3 lg:pl-6">
