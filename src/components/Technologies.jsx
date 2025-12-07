@@ -75,8 +75,6 @@ function Technologies() {
 		{ icon: <FaPython className="text-5xl" /> },
 		{ icon: <FaFigma className="text-5xl" /> },
 		{ icon: <FaJava className="text-5xl text-red-500" /> },
-		{ icon: <SiUnrealengine className="text-5xl" /> },
-		{ icon: <FaUnity className="text-5xl" /> },
 	];
 
 	return (

@@ -19,7 +19,11 @@ function Projects() {
 
 	const textVariants = {
 		hidden: { opacity: 0, x: -20 },
-		show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+		show: {
+			opacity: 1,
+			x: 0,
+			transition: { duration: 0.6, ease: "easeOut" },
+		},
 		hover: { color: "#7c3aed" },
 	};
 
@@ -34,9 +38,15 @@ function Projects() {
 
 	return (
 		<div className="border-b border-neutral-900 pb-4">
-			{" "}
-			{/* Removed the background */}
 			<h2 className="my-20 text-center text-4xl text-white">Projects</h2>
+
+			{/* Note */}
+			<p className="text-center text-sm text-neutral-500 mb-10 italic">
+				Note: Some projects may not function fully due to expired APIs or Render
+				free-tier limitations, but the source code remains complete and fully
+				functional.
+			</p>
+
 			<div>
 				{PROJECTS.map((project, index) => (
 					<motion.div
@@ -65,7 +75,6 @@ function Projects() {
 						</motion.div>
 
 						<div className="w-full max-w-2xl lg:w-2/3 lg:pl-6">
-							{" "}
 							<motion.h6
 								className="mb-4 text-2xl font-semibold text-white"
 								variants={textVariants}
@@ -75,6 +84,7 @@ function Projects() {
 							>
 								{project.title}
 							</motion.h6>
+
 							<motion.p
 								className="mb-4 text-neutral-400"
 								variants={textVariants}
@@ -83,6 +93,7 @@ function Projects() {
 							>
 								{project.description}
 							</motion.p>
+
 							<div className="flex flex-wrap">
 								{project.technologies.map((tech, index) => (
 									<motion.span
